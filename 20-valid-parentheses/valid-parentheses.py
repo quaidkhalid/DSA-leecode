@@ -1,5 +1,6 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        
         stack = []
         if len(s) == 1:
             return False
