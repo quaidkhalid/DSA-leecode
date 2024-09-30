@@ -6,11 +6,16 @@
 #         self.right = right
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        def bst(root , min_val = -float(inf), max_val = +float(inf) ):
+        # make a function to check it is bst or not 
+        def valid(root,min_val,max_val):
+            # base case
             if not root:
-                return True  # base case to stop recursion
-            if not min_val < root.val < max_val:
+                return True
+            #base case
+            if not (min_val<root.val<max_val):
                 return False
-            return (bst(root.left,min_val,root.val)) and (bst(root.right,root.val,max_val))
-        return bst(root)
+            # recursive call
+            return valid(root.left,min_val,root.val) and valid(root.right,root.val,max_val)
+            
+        return valid(root,float('-inf'),float('inf'))
         
