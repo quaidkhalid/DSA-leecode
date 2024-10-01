@@ -1,6 +1,6 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        n = len(nums)    #optimal code with O(1) time complexity
+        n = len(nums)    #optimal code with O(1) space complexity
         ans = [1] * n
         
         for i in range(1, n):
@@ -16,7 +16,7 @@ class Solution:
 
 
 
-        # n = len(nums)    #optimal code but with O(n) time complexity
+        # n = len(nums)    #optimal code but with O(n) space complexity
         # ans = [1] * n
         # prefix = [1] * n
         # suffix = [1] * n
