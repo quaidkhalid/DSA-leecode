@@ -10,10 +10,14 @@ class Solution:
         #     else:
         #         freq -= 1
         # return ans
+        # nums.sort()
+        # n = len(nums)
+        # m = n//2
+        # return nums[m]
         nums.sort()
-        n = len(nums)
-        m = n//2
-        return nums[m]
+        return nums[len(nums)//2]
+
+
         '''
         O(n) 
         '''
