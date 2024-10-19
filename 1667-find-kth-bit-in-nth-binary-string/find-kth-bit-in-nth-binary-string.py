@@ -10,7 +10,7 @@ class Solution:
         elif k == (length // 2) + 1:
             return '1'
         else:
-            ch = self.findKthBit(n - 1, length - k + 1)  # Handle reversed bit
+            ch = self.findKthBit(n - 1, length - (k - 1))  # Handle reversed bit
             return '0' if ch == '1' else '1'  # Handle flipped bit
 
         
