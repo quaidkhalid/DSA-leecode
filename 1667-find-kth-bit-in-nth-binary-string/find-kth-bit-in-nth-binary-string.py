@@ -3,7 +3,7 @@ class Solution:
         if n == 1:
             return '0'
 
-        length = (1 << n) - 1  # Same as 2^n - 1
+        length = 2**n - 1  # Same as 2^n - 1
 
         if k <= length // 2:
             return self.findKthBit(n - 1, k)
