@@ -5,21 +5,18 @@
 #         self.left = left
 #         self.right = right
 
-def invertor(root):
-    if root.left == None and root.right == None:
-            return root.val
-    left = invertor(root.left)
-    right = invertor(root.right)
-
-    if root.val == 3:
-        return (left and right)
-    if root.val == 2:
-        return (left or right)
-
-    
-
 class Solution:
     def evaluateTree(self, root: Optional[TreeNode]) -> bool:
-        return invertor(root)
+        if root.val == 1:
+            return True
+        elif root.val == 0:
+            return False
+        left = self.evaluateTree(root.left)
+        right = self.evaluateTree(root.right)
+        if root.val == 3:
+            return left and right
+        elif root.val == 2:
+            return left or right
+            
         
         
